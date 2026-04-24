@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'student-add' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div>
+        <input type="text" name="first_name" placeholder="Ismi yoziladi">
+        <input type="text" name="last_name" placeholder="Familiyasi yoziladi">
+    </div>
+
+    <div>
+        <input type="number" name="age" placeholder="Yosh">
+    </div>
+
+    <div>
+        <select name="gender">
+            <option value="male">Erkak</option>
+            <option value="female">Ayol</option>
+        </select>
+    </div>
+
+    <div>
+        <input type="text" name="address" placeholder="Manzil">
+    </div>
+
+    <div>
+        <select name="course">
+            <option value="it">IT</option>
+            <option value="english">English</option>
+        </select>
+    </div>
+
+    <div>
+        <input type="file" name="photo">
+    </div>
+
+    <button type="submit">Saqlash</button>
+</form>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button><a href="{% url 'student-add' %}">ADD +</a></button>
+    {% for student in students %}
+        <a href="{% url 'student-detial' student.id %}"><img src="{{ student.photo.url }}" alt="" width="80" height="80"></a>
+            <h5>Ism :{{ student.first_name }}</h5>
+            <h5>Familiya :{{ student.last_name }}</h5>
+            <h5>Yosh :{{ student.age }}</h5>
+            <h5>Jins :{{ student.gender }}</h5>
+            <h5>Manzil :{{ student.address }}</h5>
+            <h5>Yo'nalish :{{ student.course }}</h5>
+    {% endfor %}
+
+</body>
+</html>
