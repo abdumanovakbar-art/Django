@@ -5,8 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-        <button><a href="{% url 'student-list' %}">Student list</a></button>
 
+        <button><a href="{% url 'student-list' %}">Student list</a></button>
+        <div>
         <img src="{{ student.photo.url }}" alt="" width="80" height="80">
         <h5>Ism :{{ student.first_name }}</h5>
         <h5>Familiya :{{ student.last_name }}</h5>
@@ -14,9 +15,8 @@
         <h5>Jins :{{ student.gender }}</h5>
         <h5>Manzil :{{ student.address }}</h5>
         <h5>Yo'nalish :{{ student.course }}</h5>
-
+        </div>
         <button><a href="{% url 'student-delete' student.id %}">O'chirish</a></button>
         <button><a href="{% url 'student-edit' student.id %}">Tahrirlash</a></button>
-
 </body>
 </html>
